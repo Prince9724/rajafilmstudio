@@ -1,0 +1,146 @@
+/* Section Background */
+.about {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 20px;
+  padding: 50px 30px;
+  margin-top: 50px;
+  box-shadow: 0 0 40px rgba(255, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+/* Image */
+.image {
+  width: 220px !important;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ff1e1e;
+  box-shadow: 0 0 20px #ff1e1e;
+  transition: 0.4s ease;
+}
+
+/* Image Hover */
+.image:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 40px #ff1e1e;
+}
+
+/* Social Icons */
+.about a svg {
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+/* Icon Hover */
+.about a:hover svg {
+  transform: translateY(-5px) scale(1.1);
+  fill: #ff1e1e;
+}
+
+/* Right Text Section */
+.aboutraj {
+  max-width: 600px;
+  text-align: left;
+}
+
+/* Heading */
+.aboutraj h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ff1e1e;
+  margin-bottom: 20px;
+}
+
+/* Paragraph */
+.aboutraj p {
+  color: #d1d1d1;
+  font-size: 18px;
+  line-height: 1.8;
+  font-weight: 400 !important;
+}
+
+/* Layout Fix */
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aboutraj {
+    text-align: center;
+  }
+
+  .aboutraj h1 {
+    font-size: 36px;
+  }
+
+  .image {
+    width: 180px !important;
+    height: 180px;
+  }
+   
+}
+/* Social Links Fix */
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* SVG click fix */
+.social-link svg {
+  pointer-events: none; /* 👈 main fix */
+}
+
+/* Hover Animation */
+.social-link {
+  transition: 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+/* Instagram / YouTube hover */
+.social-link:hover svg {
+  fill: #ff1e1e;
+}
+
+/* WhatsApp special color */
+.social-link.whatsapp:hover svg {
+  fill: #25D366;
+  filter: drop-shadow(0 0 10px #25D366);
+}
+/* Fix click issue */
+.about {
+  position: relative;
+  z-index: 1;
+}
+
+.social-link {
+  position: relative;
+  z-index: 5;
+}
+
+/* Safety fix (agar koi hidden overlay ho) */
+.about::before,
+.about::after {
+  pointer-events: none;
+}
+/* Force icons always in row */
+.social-icons {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}

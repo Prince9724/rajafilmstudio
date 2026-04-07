@@ -1,0 +1,182 @@
+/* Section Title */
+.container h2 {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Card Container */
+.container .d-flex {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Card */
+.container .d-flex > div {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 0, 0, 0.2) !important;
+  border-radius: 20px;
+  padding: 30px;
+  width: 320px;
+  transition: 0.4s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow Effect (before hover) */
+.container .d-flex > div::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(255,0,0,0.15), transparent 70%);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+/* Hover Effect */
+.container .d-flex > div:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: #ff1e1e !important;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
+}
+
+.container .d-flex > div:hover::before {
+  opacity: 1;
+}
+
+/* Card Heading */
+.container .d-flex h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+/* Card Text */
+.container .d-flex p {
+  color: #bfbfbf;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.container .btn {
+  border: 1px solid #ff1e1e;
+  color: #ff1e1e;
+  border-radius: 30px;
+  padding: 8px 20px;
+  transition: 0.3s;
+}
+
+/* Button Hover */
+.container .btn:hover {
+  background: #ff1e1e;
+  color: #000;
+  box-shadow: 0 0 15px #ff1e1e;
+}
+/* Section Title */
+.container h2 {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Card Container */
+.container .d-flex {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Card */
+.card-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  width: 320px;
+  transition: 0.4s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow Effect */
+.card-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(255,0,0,0.15), transparent 70%);
+  opacity: 0;
+  transition: 0.4s;
+  pointer-events: none; /* 🔥 FIX */
+}
+
+/* Hover */
+.card-box:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: #ff1e1e;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
+}
+
+.card-box:hover::before {
+  opacity: 1;
+}
+
+/* Heading */
+.card-box h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Text */
+.card-box p {
+  color: #bfbfbf;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.container .btn {
+  border: 1px solid #ff1e1e;
+  color: #ff1e1e;
+  border-radius: 30px;
+  padding: 8px 20px;
+  transition: 0.3s;
+  position: relative;
+  z-index: 2; /* 🔥 safety */
+}
+
+/* Button Hover */
+.container .btn:hover {
+  background: #ff1e1e;
+  color: #000;
+  box-shadow: 0 0 15px #ff1e1e;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .container .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-box {
+    width: 90%;
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .container .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container .d-flex > div {
+    width: 90%;
+  }
+}

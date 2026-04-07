@@ -1,0 +1,97 @@
+/* Main Section */
+.project-section {
+  max-width: 1000px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 0 40px rgba(255, 0, 0, 0.08);
+  transition: 0.4s ease;
+}
+
+/* Hover */
+.project-section:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 60px rgba(255, 0, 0, 0.2);
+}
+
+/* Image Container */
+.project-section .image-card {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* 🔥 IMAGE = PERFECT SQUARE */
+.project-section .image {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+
+  border-radius: 0px; /* ❌ no circle → ✅ square */
+  /* agar modern chahiye: border-radius: 10px; */
+
+  border: 3px solid #ff1e1e;
+  transition: 0.4s ease;
+}
+
+/* Image Hover */
+.project-section .image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+}
+
+/* Text Section */
+.project-section .card2 {
+  flex: 1;
+}
+
+/* Text */
+.project-section .card-detail {
+  color: #ccc;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Hover */
+.project-section .card-detail:hover {
+  color: #fff;
+}
+
+/* ===== Responsive ===== */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .project-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-section .image {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .project-section {
+    padding: 20px 15px;
+  }
+
+  .project-section .image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .project-section .card-detail {
+    font-size: 14px;
+  }
+}

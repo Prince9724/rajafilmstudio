@@ -1,0 +1,98 @@
+/* Carousel Image */
+.carousel-item img {
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(40%);
+}
+
+/* Dark Overlay Gradient */
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.9) 30%,
+    rgba(0, 0, 0, 0.5) 60%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+/* Caption Container */
+.carousel-caption {
+  z-index: 2;
+  bottom: 25%;
+  left: 8%;
+  text-align: left;
+  max-width: 600px;
+  animation: fadeUp 1s ease;
+}
+
+/* Heading */
+.carousel-caption h5 {
+  font-size: 55px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+
+/* Paragraph */
+.carousel-caption p {
+  font-size: 18px;
+  color: #d1d1d1;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.carousel-caption .btn {
+  border: 1px solid #ff1e1e;
+  color: #ff1e1e;
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: 0.3s ease;
+  font-weight: 500;
+}
+
+/* Button Hover */
+.carousel-caption .btn:hover {
+  background: #ff1e1e;
+  color: #000;
+  box-shadow: 0 0 15px #ff1e1e;
+}
+
+/* Indicators (dots) */
+.carousel-indicators button {
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.carousel-indicators .active {
+  background-color: #ff1e1e;
+  opacity: 1;
+}
+
+/* Arrow Buttons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 20px;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

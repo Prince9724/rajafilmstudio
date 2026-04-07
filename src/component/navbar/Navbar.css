@@ -1,0 +1,107 @@
+ /* Navbar Base */
+.navbar {
+  background: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 10px 30px;
+}
+
+/* Logo */
+.navbar img {
+  transition: 0.4s ease;
+}
+
+.navbar img:hover {
+  transform: scale(1.1);
+}
+
+/* Center Menu */
+.home ul {
+  gap: 30px;
+}
+
+/* Nav Links */
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* Hover Effect (Underline Animation) */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #ff1e1e;
+  transition: 0.4s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Hover Text Color */
+.navbar-nav .nav-link:hover {
+  color: #ff1e1e !important;
+}
+
+/* Active Link */
+.navbar-nav .nav-link.active {
+  color: #ff1e1e !important;
+}
+
+/* Search Button */
+form .btn {
+  border: 1px solid #ff1e1e;
+  color: #ff1e1e;
+  background: transparent;
+  padding: 6px 20px;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+/* Button Hover */
+form .btn:hover {
+  background: #ff1e1e;
+  color: #000;
+  box-shadow: 0 0 10px #ff1e1e;
+}
+
+/* Mobile Menu */
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Mobile Dropdown Background */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(0, 0, 0, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .home ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  form {
+    justify-content: center;
+    margin-top: 15px;
+  }
+}
