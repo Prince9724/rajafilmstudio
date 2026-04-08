@@ -1,10 +1,12 @@
 import React from 'react'
+import { useNavigate } from 'react-router'
 // import png from "https://cdn.pixabay.co m/photo/2014/10/29/01/00/logo-507440_640.png"
 import ban1 from "../images/logo/RAJA FILMS STUDIO.png"
-import ban2 from "../images/hero/Rk banner final anil akela entertainment.png"
+import ban2 from "../project_work/imagePoster/pos1.jpeg"
 import ban3 from "../images/hero/sec2.jpeg"
 import "../hero/Hero.css"
 const Hero = () => {
+    const navigate = useNavigate();
     return (
         <div>
             <div id="carouselExampleDark" className="carousel slide">
@@ -36,7 +38,7 @@ const Hero = () => {
                         <div className="carousel-caption  ">
                             <h5> logo design</h5>
                             <p>Transform Your Brand Identity with a Unique, Professional Logo Tailored Just for You.</p>
-                            <button className="btn  btn-outline-danger">Veiw work</button>
+                            <button className="btn  btn-outline-danger" onClick={()=>{navigate("/logo")}}>Veiw work</button>
                         </div>
                     </div>
                     <div className="carousel-item" data-bs-interval={2000}>

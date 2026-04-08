@@ -85,7 +85,14 @@ form .btn:hover {
 .navbar-toggler:focus {
   box-shadow: none;
 }
-
+.lang-dropdown {
+  background: black;
+  color: white;
+  border: 1px solid #ff1e1e;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
 /* Mobile Dropdown Background */
 @media (max-width: 991px) {
   .navbar-collapse {

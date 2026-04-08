@@ -1,7 +1,10 @@
 import React from 'react'
-import logo1 from '../veiw-pro/image/logo/logo3.png'
-import logo2 from '../veiw-pro/image/logo/logo6.png';
+import logo1 from '../veiw-pro/image/logo/logo7.jpeg'
+import logo2 from '../project_work/image/logo11.jpeg';
+import poster1 from '../project_work/imagePoster/posterraj2.png'
+import poster2 from '../project_work/imagePoster/posabc3.jpeg'
 import { useNavigate } from 'react-router';
+import Poster from '../project_work/Poster';
 const Veiw = () => {
     const navigate = useNavigate()
     return (
@@ -103,7 +106,7 @@ const Veiw = () => {
                     >
                         <div className="col-4 child-row2 child-row2">
                             <div className="card">
-                                <img className="img-fluid w-100" src={".."} alt="..." />
+                                <img className="img-fluid w-100" src={poster1} alt="..." />
                                 <div className="card-body">
                                     <h2>App Project 1</h2>
                                 </div>
