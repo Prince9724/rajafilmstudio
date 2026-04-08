@@ -5,7 +5,7 @@ export const LangContext = createContext();
 const translations = {
   en: {
     home: "Home",
-    service: "Service",
+    service: "Logo",
     project: "Project",
     about: "About",
     contact: "Contact",

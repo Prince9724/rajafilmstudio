@@ -66,7 +66,7 @@ const Veiw = () => {
                         tabIndex={0}
                     >
                         <div className="container">
-                            <div className="row  mt-2">
+                            <div className="row d-flex  mt-2">
                                 <div className="col-4 child-row2">
                                     <div className="card">
                                         <img
@@ -74,9 +74,7 @@ const Veiw = () => {
                                             src={logo1}
                                             alt="..."
                                         />
-                                        <div className="card-body">
-                                            <h2>Web project 1</h2>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <div className="col-4 child-row2">
@@ -86,13 +84,11 @@ const Veiw = () => {
                                             src={logo2}
                                             alt="..."
                                         />
-                                        <div className="card-body">
-                                            <h2>Web project 2</h2>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <div>
-                                    <button className='btn btn-outline-danger'onClick={()=>navigate("/logo")}>View  more</button>
+                                    <button className='btn btn-outline-danger' onClick={() => navigate("/logo")}>View  more</button>
                                 </div>
                             </div>
                         </div>
@@ -104,14 +100,22 @@ const Veiw = () => {
                         aria-labelledby="profile-tab"
                         tabIndex={0}
                     >
-                        <div className="col-4 child-row2 child-row2">
+                        <div className="container">
+                            <div className='row d-flex  mt-2'>
+                            <div className="col-4 child-row2 child-row2">
                             <div className="card">
                                 <img className="img-fluid w-100" src={poster1} alt="..." />
-                                <div className="card-body">
-                                    <h2>App Project 1</h2>
-                                </div>
+
                             </div>
+
                         </div>
+                        <div>
+                            <button className='btn btn-outline-danger' onClick={() => navigate("/poster")}>View  more</button>
+                        </div>
+                        </div>
+                        </div>
+
+                        
                     </div>
                     <div
                         className="tab-pane fade"

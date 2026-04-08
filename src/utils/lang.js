@@ -1,8 +1,8 @@
 export const data = {
   en: {
     home: "Home",
-    service: "Service",
-    project: "Project",
+    Logo: "Logo",
+    Poster: "Poster",
     about: "About",
     contact: "Contact",
   },

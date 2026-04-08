@@ -4,7 +4,7 @@ import Logo from './component/project_work/Logo'
 import Home from './component/home/Home'
 import Poster from './component/project_work/Poster'
 // import LanguageProvider  from './Language.jsx'
-import LanguageProvider from "./language";
+import LanguageProvider from "./Language.jsx";
 const App = () => {
   return (
     <LanguageProvider>   {/* 👈 wrap yaha karo */}
